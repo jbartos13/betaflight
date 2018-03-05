@@ -24,13 +24,7 @@
 
 #include "scheduler/scheduler.h"
 
-int main(void)
-{
-    init();
-    while (true) {
-        scheduler();
-        processLoopback();
 
-    }
-    return 0;
-}
+
+
+

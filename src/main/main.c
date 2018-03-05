@@ -25,6 +25,8 @@
 #include "scheduler/scheduler.h"
 
 #include "imu/imu.h"
+#include "drivers/serial.h"
+
 
 int curr_gyro[3];
 int curr_accel[3];
@@ -36,7 +38,7 @@ int main(void)
 
     	//Get Data 
     	//Send to Serial
-
+    	serialPrint(loopbackPort, "Serial works!\r\n");
 
         processLoopback();
     }
