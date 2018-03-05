@@ -24,15 +24,21 @@
 
 #include "scheduler/scheduler.h"
 
+#include "imu/imu.h"
+
+int curr_gyro[3];
+int curr_accel[3];
+
 int main(void)
 {
     init();
     while (true) {
-        scheduler();
+
+    	//Get Data 
+    	//Send to Serial
+
+
         processLoopback();
-#ifdef SIMULATOR_BUILD
-        delayMicroseconds_real(50); // max rate 20kHz
-#endif
     }
     return 0;
 }
